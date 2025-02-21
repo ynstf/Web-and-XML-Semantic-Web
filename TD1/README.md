@@ -91,3 +91,8 @@ Ce programme permet de tester si un nombre introduit par l'utilisateur est premi
 
 Dans cette solution, deux fichiers sont fournis : `index.html` pour l'interaction avec l'utilisateur sur une page web et `script.js` pour la logique du programme, utilisée à la fois sur la page web et en ligne de commande. L'utilisateur peut tester un nombre dans un navigateur ou dans un terminal, et le programme fournira une réponse détaillée sur la primalité du nombre.
 
+# Exercice 6 : Suite de Fibonacci
+
+Dans cet exercice, le programme permet de calculer des termes de la suite de Fibonacci. Le premier programme, **Fibo1**, calcule le nième terme de la suite, où n est spécifié par l'utilisateur. Le deuxième programme, **Fibo2**, trouve le premier terme de la suite qui est supérieur à une valeur donnée. Les deux programmes peuvent être utilisés à la fois sur une interface web avec un fichier HTML et sur la ligne de commande via Node.js, permettant ainsi à l'utilisateur de choisir son mode d'interaction.
+
+Le fichier **index.html** contient l'interface web où l'utilisateur peut entrer une valeur pour n (pour Fibo1) ou un seuil (pour Fibo2), et le résultat est affiché directement sur la page. Le fichier **script.js** contient la logique de calcul de la suite et permet également de réaliser les mêmes calculs en ligne de commande, offrant ainsi une flexibilité d'utilisation pour différents types d'interaction avec le programme.
