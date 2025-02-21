@@ -93,6 +93,12 @@ Dans cette solution, deux fichiers sont fournis : `index.html` pour l'interactio
 
 # Exercice 6 : Suite de Fibonacci
 
-Dans cet exercice, le programme permet de calculer des termes de la suite de Fibonacci. Le premier programme, **Fibo1**, calcule le nième terme de la suite, où n est spécifié par l'utilisateur. Le deuxième programme, **Fibo2**, trouve le premier terme de la suite qui est supérieur à une valeur donnée. Les deux programmes peuvent être utilisés à la fois sur une interface web avec un fichier HTML et sur la ligne de commande via Node.js, permettant ainsi à l'utilisateur de choisir son mode d'interaction.
+Dans cette exercice, le programme permet de calculer des termes de la suite de Fibonacci. Le premier programme, **Fibo1**, calcule le nième terme de la suite, où n est spécifié par l'utilisateur. Le deuxième programme, **Fibo2**, trouve le premier terme de la suite qui est supérieur à une valeur donnée. Les deux programmes peuvent être utilisés à la fois sur une interface web avec un fichier HTML et sur la ligne de commande via Node.js, permettant ainsi à l'utilisateur de choisir son mode d'interaction.
 
 Le fichier **index.html** contient l'interface web où l'utilisateur peut entrer une valeur pour n (pour Fibo1) ou un seuil (pour Fibo2), et le résultat est affiché directement sur la page. Le fichier **script.js** contient la logique de calcul de la suite et permet également de réaliser les mêmes calculs en ligne de commande, offrant ainsi une flexibilité d'utilisation pour différents types d'interaction avec le programme.
+
+# Exercice 7 : Valeur approchée de la √ d'un nombre réel positif
+
+Dans cette exercice, nous calculons une valeur approchée de la racine carrée d’un nombre réel positif A en utilisant la méthode de récurrence. Le programme présente deux modes d'interaction : une interface web via **index.html**, où l'utilisateur peut entrer un nombre réel entre 1 et 100 et obtenir la valeur approchée de la racine carrée affichée sur la page, et une interaction en ligne de commande via **script.js**, qui demande à l'utilisateur d'entrer un nombre dans la plage spécifiée et affiche le résultat dans le terminal.
+
+Le fichier **index.html** permet de saisir un nombre directement sur la page et de calculer la racine carrée approximée en cliquant sur un bouton, tandis que le fichier **script.js** contient la logique de calcul à la fois pour le navigateur et pour l'exécution en ligne de commande. La méthode utilisée garantit une valeur très proche de la racine carrée exacte, avec une précision supérieure à 1e-6, assurant ainsi une approche rapide et efficace du calcul.
