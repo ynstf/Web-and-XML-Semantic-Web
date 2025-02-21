@@ -25,3 +25,9 @@ Ce exercice propose une solution en JavaScript pour trier trois nombres saisis p
 
 Le même code est également conçu pour interagir en ligne de commande lorsqu’il est exécuté dans un environnement Node.js. En utilisant les fonctions standard d’entrée et de sortie, le programme sollicite successivement les trois nombres via le terminal et affiche ensuite l’ordre croissant obtenu. Cette approche montre la flexibilité du code, qui peut être exploité à la fois dans une application web et en mode console.
 
+
+# Exercice 4 : Affichage de motifs - Escaliers
+
+Ce exercice propose une solution en JavaScript pour afficher un motif triangulaire sous forme d'escalier dont la taille est déterminée par l'utilisateur. L'interface web permet de saisir la taille du motif et d'afficher le résultat en utilisant soit une boucle `while`, soit une boucle `for` en fonction du choix de l'utilisateur. Le motif est affiché dans une zone préformatée pour maintenir l'alignement des étoiles.
+
+Le script est également conçu pour interagir avec l'utilisateur en ligne de commande, en utilisant Node.js. Après avoir saisi la taille du motif, l'utilisateur choisit la méthode pour générer le motif (avec `while` ou `for`). Le motif correspondant est ensuite affiché dans le terminal, offrant ainsi une expérience similaire à celle de l'interface web.
