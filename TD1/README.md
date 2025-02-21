@@ -85,3 +85,9 @@ Le motif est centré automatiquement en fonction de la taille de la pyramide. Le
 
 
 
+# Exercice 5 : Tester si un nombre est premier
+
+Ce programme permet de tester si un nombre introduit par l'utilisateur est premier. Un nombre est premier si ses seuls diviseurs sont 1 et lui-même. L'utilisateur peut entrer un entier positif via une interface web ou en ligne de commande (Node.js). Le programme retourne si le nombre est premier ou non, et si ce n'est pas le cas, il affiche également un diviseur du nombre.
+
+Dans cette solution, deux fichiers sont fournis : `index.html` pour l'interaction avec l'utilisateur sur une page web et `script.js` pour la logique du programme, utilisée à la fois sur la page web et en ligne de commande. L'utilisateur peut tester un nombre dans un navigateur ou dans un terminal, et le programme fournira une réponse détaillée sur la primalité du nombre.
+
