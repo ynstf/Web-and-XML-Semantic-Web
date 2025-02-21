@@ -31,3 +31,57 @@ Le même code est également conçu pour interagir en ligne de commande lorsqu�
 Ce exercice propose une solution en JavaScript pour afficher un motif triangulaire sous forme d'escalier dont la taille est déterminée par l'utilisateur. L'interface web permet de saisir la taille du motif et d'afficher le résultat en utilisant soit une boucle `while`, soit une boucle `for` en fonction du choix de l'utilisateur. Le motif est affiché dans une zone préformatée pour maintenir l'alignement des étoiles.
 
 Le script est également conçu pour interagir avec l'utilisateur en ligne de commande, en utilisant Node.js. Après avoir saisi la taille du motif, l'utilisateur choisit la méthode pour générer le motif (avec `while` ou `for`). Le motif correspondant est ensuite affiché dans le terminal, offrant ainsi une expérience similaire à celle de l'interface web.
+
+
+# Exercice 4-bis : Affichage de motifs - Pyramides
+
+Ce projet consiste à afficher une pyramide dans laquelle chaque ligne contient un nombre d'étoiles qui augmente à mesure que l'on descend, et ce nombre est centré pour donner l'apparence d'une pyramide. La taille de la pyramide est déterminée par l'utilisateur, et le script peut être exécuté soit sur une page web avec une interface interactive, soit en ligne de commande avec Node.js.
+
+## Fonctionnement du projet
+
+### Interface Web
+Le fichier `index.html` permet à l'utilisateur d'interagir avec le programme via un formulaire. L'utilisateur entre la taille du motif (en nombre de lignes), puis clique sur le bouton pour afficher la pyramide. Le motif est généré dynamiquement par le fichier `script.js` et s'affiche dans une zone dédiée de la page.
+
+### Interaction en Ligne de Commande (Node.js)
+Le fichier `script.js` peut également être exécuté dans un terminal en utilisant Node.js. Lorsque l'utilisateur entre la taille de la pyramide dans le terminal, le script génère le motif et l'affiche directement dans la console. Après l'affichage, le programme demande à nouveau la taille du motif, permettant ainsi une nouvelle génération du motif sans redémarrer le script.
+
+## Fonctionnalités
+
+1. **Interface Web** : Saisie de la taille du motif et affichage de la pyramide dans le navigateur.
+2. **Interaction en Ligne de Commande** : Saisie de la taille du motif dans le terminal avec un affichage direct du motif dans la console.
+3. **Affichage Dynamique** : Le motif est centré et utilise des étoiles `*` pour créer la pyramide, dont la largeur augmente au fur et à mesure que l'on descend.
+
+## Utilisation
+
+### 1. Interface Web
+1. Ouvrez le fichier `index.html` dans un navigateur web.
+2. Entrez la taille du motif (en nombre de lignes) dans le champ prévu.
+3. Cliquez sur le bouton pour afficher la pyramide.
+
+### 2. Interaction en Ligne de Commande
+1. Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé sur votre machine.
+2. Exécutez le fichier `script.js` via Node.js en ligne de commande :
+   ```bash
+   node script.js
+   ```
+3. Entrez la taille du motif lorsque vous êtes invité, et le script générera et affichera la pyramide.
+
+## Exemple d'Exécution
+
+Si l'utilisateur entre la taille `7`, le motif de la pyramide sera :
+
+```
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+```
+
+## Remarque
+Le motif est centré automatiquement en fonction de la taille de la pyramide. Le nombre d'étoiles dans chaque ligne suit un modèle de progression impair (1, 3, 5, 7, etc.), créant ainsi l'apparence d'une pyramide.
+
+
+
