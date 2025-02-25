@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice-Simple</title>
+</head>
+<body>
+    
+    <input type="text" id="num1">
+    <br><br>
+    <input type="text" id="num2">
+    <br><br>
+    <input type="submit" value="+" onclick="add()">
+    <input type="submit" value="-" onclick="sub()">
+    <input type="submit" value="*" onclick="multiply()">
+    <input type="submit" value="/" onclick="divide()">
+    <br><br>
+    <input type="text" id="result">
+
+    <script>
+        function add(){
+            var num1Element = document.getElementById('num1');
+            var num2Element = document.getElementById('num2');
+            var resultElement = document.getElementById('result');
+            var num1 = parseFloat(num1Element.value);
+            var num2 = parseFloat(num2Element.value);
+            var result = resultElement.value;
+            var res = num1 + num2;
+            resultElement.value = res;
+        }
+        function sub(){
+            var num1Element = document.getElementById('num1');
+            var num2Element = document.getElementById('num2');
+            var resultElement = document.getElementById('result');
+            var num1 = parseFloat(num1Element.value);
+            var num2 = parseFloat(num2Element.value);
+            var result = resultElement.value;
+            var res = num1 - num2;
+            resultElement.value = res;
+        }
+        function multiply(){
+            var num1Element = document.getElementById('num1');
+            var num2Element = document.getElementById('num2');
+            var resultElement = document.getElementById('result');
+            var num1 = parseFloat(num1Element.value);
+            var num2 = parseFloat(num2Element.value);
+            var result = resultElement.value;
+            var res = num1 * num2;
+            resultElement.value = res;
+        }
+        function divide(){
+            var num1Element = document.getElementById('num1');
+            var num2Element = document.getElementById('num2');
+            var resultElement = document.getElementById('result');
+            var num1 = parseFloat(num1Element.value);
+            var num2 = parseFloat(num2Element.value);
+            var result = resultElement.value;
+            var res = num1 / num2;
+            resultElement.value = res;
+        }
+    </script>
+</body>
+</html>
