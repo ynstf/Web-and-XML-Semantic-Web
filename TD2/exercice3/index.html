@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculateur d'IMC</title>
+</head>
+<body>
+    <h1>Calculateur d'IMC</h1>
+    <label for="">Poids (kg)</label>
+    <input type="text" id="p">
+    <br><br>
+    <label for="">Taille (m)</label>
+    <input type="text" id="t">
+    <br><br>
+    <input type="submit" value="calculer" onclick="imc()">
+    <br><br>
+    <p id="resTxt"></p>
+
+    <script>
+        function imc(){
+            var pElement = document.getElementById('p');
+            var tElement = document.getElementById('t');
+            var resTxtElement = document.getElementById('resTxt');
+            var p = parseFloat(pElement.value);
+            var t = parseFloat(tElement.value);
+            var resTxt = "";
+            var res = p / (t*t);
+            resTxt += "Votre IMC est de "+ res
+            resTxt += ". Vous etes un etat "
+            console.log(res)
+            if (res<18.5) {
+                resTxt += "d'Insuffisance pondérale (maigreur)."
+            } 
+            if (res>18.5 && res<25 ) {
+                resTxt += "de Corpulence normale."
+            } 
+            if (res>25 && res<30 ) {
+                resTxt += "de Surpoids."
+            } 
+            if (res>30 && res<35 ) {
+                resTxt += "d'Obésité modérée."
+            } 
+            if (res>35 && res<40 ) {
+                resTxt += "d'Obésité sévère."
+            } 
+            if (res>40 ) {
+                resTxt += "d'Obésité morbide ou massive."
+            } 
+
+            resTxtElement.innerText = resTxt;
+        }
+
+    </script>
+</body>
+</html>
