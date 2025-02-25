@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutation</title>
+</head>
+<body>
+    
+    <input type="text" id="num1">
+    <br><br>
+    <input type="text" id="num2">
+    <br><br>
+    <input type="submit" value="Permutation" onclick="permutation()">
+    <script>
+        function permutation(){
+            var num1Element = document.getElementById('num1');
+            var num2Element = document.getElementById('num2');
+            var num1 = num1Element.value;
+            var num2 = num2Element.value;
+            num1Element.value = num2;
+            num2Element.value = num1;
+
+        }
+    </script>
+</body>
+</html>
