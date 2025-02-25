@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        }
+        .calc-container {
+        display: flex;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .scientific, .basic {
+        padding: 20px;
+        }
+        /* Scientific buttons on the left in 2 columns */
+        .scientific {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        border-right: 2px solid #ccc;
+        }
+        /* Basic calculator on the right in 4 columns */
+        .basic {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        }
+        .display {
+        grid-column: span 4;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+        font-size: 1.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #eaeaea;
+        margin-bottom: 10px;
+        }
+        button {
+        padding: 15px;
+        font-size: 1.2em;
+        border: none;
+        background: #ddd;
+        cursor: pointer;
+        border-radius: 5px;
+        }
+        button:hover {
+        background: #ccc;
+        }
+        .equal {
+        background: #28a745;
+        color: white;
+        }
+        .equal:hover {
+        background: #218838;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="calc-container">
+        <!-- Scientific functions panel (left) -->
+        <div class="scientific">
+        <button data-func="sin">sin</button>
+        <button data-func="cos">cos</button>
+        <button data-func="tan">tan</button>
+        <button data-func="sqrt">√</button>
+        
+        <button data-func="ln">ln</button>
+        <button data-func="log">log</button>
+        <button data-value="Math.PI">π</button>
+        <button data-value="Math.E">e</button>
+        
+        <button data-func="exp">EXP</button>
+        <button data-op="square">x²</button>
+        <button data-func="pow">x^</button>
+        <button data-op="inv">Inv</button>
+        </div>
+
+        <!-- Basic calculator panel (right) -->
+        <div class="basic">
+        <input type="text" class="display" id="display" disabled />
+        <button data-value="(">(</button>
+        <button data-value=")">)</button>
+        <button data-value="%">%</button>
+        <button data-clear>CE</button>
+        
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/">/</button>
+        
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*">*</button>
+        
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-">-</button>
+        
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button data-equals class="equal">=</button>
+        <button data-value="+">+</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+        
+        // Basic calculator buttons
+        document.querySelectorAll('.basic button').forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.hasAttribute('data-clear')) {
+            display.value = '';
+            } else if (button.hasAttribute('data-equals')) {
+            try {
+                // Evaluate the expression built up in the display.
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+            } else {
+            display.value += button.getAttribute('data-value');
+            }
+        });
+        });
+        
+        // Scientific buttons behavior
+        document.querySelectorAll('.scientific button').forEach(button => {
+        button.addEventListener('click', () => {
+            const func = button.getAttribute('data-func');
+            const op = button.getAttribute('data-op');
+            const value = button.getAttribute('data-value');
+            
+            if (value) {
+            // For π and e.
+            display.value += value;
+            } else if (func) {
+            switch(func) {
+                case 'sin':
+                case 'cos':
+                case 'tan':
+                display.value += 'Math.' + func + '(';
+                break;
+                case 'sqrt':
+                display.value += 'Math.sqrt(';
+                break;
+                case 'ln':
+                display.value += 'Math.log(';
+                break;
+                case 'log':
+                display.value += 'Math.log10(';
+                break;
+                case 'exp':
+                display.value += 'Math.exp(';
+                break;
+                case 'pow':
+                // For x^, we use the exponentiation operator '**'
+                display.value += '**';
+                break;
+                default:
+                break;
+            }
+            } else if (op) {
+            switch(op) {
+                case 'square':
+                display.value += '**2';
+                break;
+                case 'inv':
+                display.value += '1/(';
+                break;
+                default:
+                break;
+            }
+            }
+        });
+        });
+    </script>
+    </body>
+</html>
