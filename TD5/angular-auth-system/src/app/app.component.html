@@ -1,0 +1,27 @@
+<div class="app-container">
+  <header>
+    <div class="logo-container">
+      <img src="N7-logo-fr.png" alt="N7 Logo" class="logo">
+    </div>
+    <nav>
+      <!-- Show these links when user is NOT logged in -->
+      <ng-container *ngIf="!isLoggedIn">
+        <a routerLink="/signup">Sign Up</a>
+        <a routerLink="/login">Login</a>
+      </ng-container>
+      
+      <!-- Show these when user is logged in -->
+      <ng-container *ngIf="isLoggedIn">
+        <span class="welcome-text">Welcome, {{ username }}</span>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="#">Products</a>
+        <a routerLink="#">Uploade File</a>
+        <a href="javascript:void(0)" (click)="logout()" class="logout-link">Logout</a>
+      </ng-container>
+    </nav>
+  </header>
+  
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,55 @@
+.app-container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #4CAF50;
+  }
+  
+  .welcome-text {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .logout-link {
+    color: #f44336;
+  }
+  
+  .logout-link:hover {
+    color: #d32f2f;
+  }
